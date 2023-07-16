@@ -1,0 +1,7 @@
+gerer  :
+map carree ou rectangulaire domc pas de caracteres 1 qui depasse 
+gerer que le map contienne P C E 1 0 
+Gerer le nombre d arguments 1 max
+gerer le path finding (algo specifique en position x et y dans ton tab de tab )
+gerer les leaks
+mettre des messages d erreur personnalises pour chaque type de probleme (exemple maneu playeur manque exit manque collectible map pas pratiquable etc )
