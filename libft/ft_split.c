@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npatron <npatron@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 10:03:55 by npatron           #+#    #+#             */
-/*   Updated: 2023/07/10 15:57:15 by npatron          ###   ########.fr       */
+/*   Updated: 2023/07/17 16:09:16 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ static int	count_words(char const *s, char c)
 	{
 		if ((s[i] != c && s[i] != '\0')
 			&& (s[i + 1] == c || s[i + 1] == '\0'))
+		{
 			j++;
 			i++;
+		}
 	}
 	return (j);
 }
