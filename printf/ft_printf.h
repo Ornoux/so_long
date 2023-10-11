@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/27 18:18:27 by npatron           #+#    #+#             */
-/*   Updated: 2023/10/03 11:36:13 by nicolas          ###   ########.fr       */
+/*   Created: 2023/10/04 09:21:23 by nicolas           #+#    #+#             */
+/*   Updated: 2023/10/04 09:21:25 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+# include <stdarg.h>
+# include <unistd.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	size_t	i;
+int				ft_printf(const char *str, ...);
+int				ft_printstr(char *str);
+int				ft_printnbr(int nb);
+int				ft_printunsnbr(unsigned int nb);
+void			ft_putchar(char c);
+int				ft_printhexbnbr(unsigned long long nb);
+int				ft_printhexlnbr(unsigned long long nb);
+int				ft_printchar(char c);
 
-	i = 0;
-	if (!dst)
-		return (NULL);
-	while (i < n)
-	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-	}
-	return (dst);
-}
+#endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npatron <npatron@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 16:51:34 by npatron           #+#    #+#             */
-/*   Updated: 2023/07/11 12:04:06 by npatron          ###   ########.fr       */
+/*   Updated: 2023/10/04 09:57:57 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include "./get_next_line/get_next_line.h"
+# include "./printf/ft_printf.h"
 
 void	ft_bzero(void *s, size_t n);
 size_t	ft_strlen(const char *s);
@@ -49,7 +51,6 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s, char const *set);
-
 typedef struct s_list
 {
 	void			*content;

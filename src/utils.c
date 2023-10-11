@@ -1,28 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nicolas <nicolas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/27 18:18:27 by npatron           #+#    #+#             */
-/*   Updated: 2023/10/03 11:36:13 by nicolas          ###   ########.fr       */
+/*   Created: 2023/10/10 11:20:11 by nicolas           #+#    #+#             */
+/*   Updated: 2023/10/11 03:12:17 by nicolas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "so_long.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	size_t	i;
+	char	*tab;
+
+	i = 0;
+	tab = (void *)malloc(size * nmemb);
+	if (!tab)
+		return (NULL);
+	while (i < nmemb * size)
+	{
+		tab[i] = 0;
+		i++;
+	}
+	return (tab);
+}
+
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
 	i = 0;
-	if (!dst)
-		return (NULL);
-	while (i < n)
+	while (s[i])
+		i++;
+	return (i);
+}
+
+void	ft_putstr(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		write(1, &s[i], 1);
+		i++;
 	}
-	return (dst);
 }
